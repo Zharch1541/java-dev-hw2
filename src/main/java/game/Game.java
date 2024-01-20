@@ -2,14 +2,10 @@ package game;
 import java.util.Scanner;
 
 public class Game {
-    Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     private byte input;
-    private final char[] board;
+    private static char[] board = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
     boolean gameOver = false;
-
-    public Game() {
-        board = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-    }
     public static void printBoard(char[] board) {
         for (int i = 0; i < 9; i++) {
             System.out.print(" " + board[i] + " ");
